@@ -20,3 +20,8 @@ strip = true
 
 [patch."https://github.com/Th0rgal/open_oura"]
 oura-store = { path = "vendor/oura-store" }
+# Local (oura-break): build the ring crates from the sibling open_oura checkout so sync
+# gets its drain fixes newer than the pinned rev (c36cd72, 8d454a5).
+oura-protocol = { path = "../open_oura/crates/oura-protocol" }
+oura-link = { path = "../open_oura/crates/oura-link" }
+oura-analysis = { path = "../open_oura/crates/oura-analysis" }
